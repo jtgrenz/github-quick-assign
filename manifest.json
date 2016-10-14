@@ -1,17 +1,19 @@
 {
   "name":             "GitHub quick issue assignment",
-  "version":          "1.0.0",
+  "version":          "1.0.1",
   "homepage_url":     "https://github.com/mikulas/github-quick-assign",
 
   "manifest_version": 2,
 
-  "description": "",
+  "description": "Simple extension to quickly assign issues and PRs to issue participants",
 
   "content_scripts": [
     {
-        "matches":  ["https://github.com/manGoweb/darujme/issues/*", "https://github.com/manGoweb/darujme/pull/*"],
-        "js":       ["main.js"],
-        "css":      ["style.css"]
+        "matches":  ["https://github.com/*"],
+        "js"     :  ["main.js"],
+        "css"    :  ["style.css"],
+        "run_at" :  "document_end"
     }
-  ]
+  ],
+  "web_accessible_resources": ["inject.js"]
 }

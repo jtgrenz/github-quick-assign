@@ -1,2 +1,0 @@
-github-quick-assign.crx
-github-quick-assign.pem
